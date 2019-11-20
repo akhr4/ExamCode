@@ -1,4 +1,4 @@
-import java.util.Scanner 
+import java.util.Scanner;
 class Main{
     public static String input(String message){
         System.out.println(message);
@@ -22,7 +22,7 @@ class Main{
         while (!(enquiry.equalsIgnoreCase("exit"))){
             enquiry = input("Do you want to find, add or exit ?");
             if (enquiry.equalsIgnoreCase("find")){
-                findDVD(dvdname, dvdprice)
+                findDVD(dvdname, dvdprice);
             }
             else if (enquiry.equalsIgnoreCase("add")){
                 addDVD(dvdname,dvdprice);
@@ -40,21 +40,23 @@ class Main{
         int index = inputInt("Enter the shelf you want to check");
         double price = inputDouble("Enter DVD price:");
         String dvd = input("Enter the DVD name:");
-        while (!(index < 0)){
+        while (!(index > 0)){
             System.out.println("Your input is not understood");
             index = inputInt("Enter the shelf you want to check");
         } 
-        dvdname[index] = dvd;
-        dvdprice[index] = price;
+        System.out.println("At shelf number " + index + ", the DVD that is currently there is " + dvdname[index] + " and it has the price of : "+dvdprice[index]);
+        
     }
     
-    public static void findDVD(String[] dvdname, String[] dvdprice){
+    public static void findDVD(String[] dvdname, Double[] dvdprice){
         String dvd = input("Enter the DVD you want to search for");
         boolean found = false;
         while (!(found)){
-            for (int i=0, i<dvd.length, i++){
-              if (dvdname[i] == dvd)
+            for (int i=0; i<dvd.length(); i++){
+              if (dvdname[i] == dvd){
+                    found = true; 
+              }
             }
-        }
+         }
     }
 }
