@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class football{
     public static void main(String[] args){
-        int size = 8;
+        int size = 18;
         String[] hometeam = new String[size];
         String[] awayteam = new String[size];
         int[] hometeamscore = new int[size];
