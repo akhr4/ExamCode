@@ -2,7 +2,7 @@ import java.util.Scanner;
 class reportCard{
 
     public static void main(String[] args){
-        int size = 10; //Set to 500
+        int size = 500; //Set to 500
         String[] Student = new String[size];
         int[] maths = new int[size];
         int[] computing = new int[size];
