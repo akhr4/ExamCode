@@ -1,13 +1,13 @@
+/*
 import java.util.Scanner;
 class Main{
     public static void main(String[] args){
-        int size = 10;
+        int size = 150;
         Bookshelf[] log = new Bookshelf[size];
         int counter= -1;
         int choice = -1;
         while (!(choice == 3)){
             counter = counter+1;
-            System.out.println("Counter " + counter); 
             choice = inputint("1) Add 2) view 3) exit");
             if (choice == 3){
                 System.out.println("Okay bye!");
@@ -24,12 +24,11 @@ class Main{
                 choice = inputint("Invalid input 1)Add 2) View 3) Exit");
             }
         }
-        //counter = menu(log, counter);
         System.exit(0);
     }
 
     public static void viewdirectory(Bookshelf[] log, int counter){
-        for (int i=0; i<(counter-1); i++){
+        for (int i=0; i<(counter); i++){
             System.out.println("Book " + (i+1) + " title name: " + gettitle(log[i]) + " quantity " + getquantity(log[i]));
         }
         return;
@@ -91,4 +90,17 @@ class Main{
 class Bookshelf{
     String title;
     int quantity;
+}
+*/
+class Main{
+    public static void main(String[] args){
+        int sum = 0;
+        int number = 0;
+        while (number < 101){
+            sum = sum + number;
+            number = number + 1;
+        }
+        System.out.println(sum);
+        System.exit(0);
+    }
 }
